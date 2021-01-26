@@ -1,0 +1,56 @@
+\documentclass[UTF8]{article}
+\usepackage{CTEX}
+
+\begin{document}
+
+\section{实验参数设置}
+\begin{enumerate}
+    \item LinkedList：long类型的单值
+    \item SkipList：形如$<long, long>$的键值对
+    \item BPlusTree：形如$<long, long>$的键值对
+    \item LongTVList：形如$<long, long>$的键值对
+\end{enumerate}
+
+\section{顺序插入结果}
+将$1$到$n$的数据顺序插入数据结构，统计插入时间
+
+\begin{tabular}{|c|c|c|c|c|}
+
+    \hline
+     & $10^3$ & $10^4$ & $10^5$ & $10^6$ \\
+    \hline
+    LinkedList & 0.2ms & 0.7ms & 1.7ms & 32.6ms\\
+    \hline
+    SkipList & 0.5ms & 1.9ms & 14.5ms & 172.6ms\\
+    \hline
+    BPlusTree & 0.9ms & 5.3ms & 15.5ms & 120.2ms\\
+    \hline
+    LongTVList & 0.4ms & 1.0ms & 3.6ms & 22.1ms\\
+    \hline
+
+\end{tabular}
+
+\section{随机插入结果}
+将$1$到$n$的一个排列插入数据结构，统计插入及维护数据有序的总耗时
+
+\begin{tabular}{|c|c|c|c|c|}
+
+    \hline
+     & $10^3$ & $10^4$ & $10^5$ & $10^6$ \\
+    \hline
+    LinkedList & 12.0ms & 293.0ms & 34929ms & 21311685ms\\
+    \hline
+    SkipList & 0.5ms & 2.4ms & 32.4ms & 779.2ms\\
+    \hline
+    BPlusTree & 1.0ms & 6.4ms & 42.0ms & 825.7ms\\
+    \hline
+    LongTVList(insert) & 0.2ms & 0.6ms & 2.6ms & 18.4ms\\
+    \hline
+    LongTVList(sort) & 1.7ms & 7.8ms & 60.5ms & 747.4ms\\
+    \hline
+    LongTVList(total) & 1.9ms & 8.4ms & 63.1ms & 765.8ms\\
+    \hline
+
+\end{tabular}
+
+\end{document}
