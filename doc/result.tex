@@ -4,12 +4,17 @@
 \begin{document}
 
 \section{实验参数设置}
-\begin{enumerate}
-    \item LinkedList：long类型的单值
-    \item SkipList：形如$<long, long>$的键值对
-    \item BPlusTree：形如$<long, long>$的键值对
-    \item LongTVList：形如$<long, long>$的键值对
-\end{enumerate}
+\subsection{LinkedList}
+LinkedList中的数据为long类型的单值
+
+\subsection{SkipList}
+SkipList中的数据为形如$<long, long>$的键-值对，插入一个新节点时，节点向上分裂的概率为0.5
+
+\subsection{BPlusTree}
+BPlusTree中的数据为形如$<long, long>$的键-值对，BPlusTree的阶数为1024
+
+\subsection{LongTVList}
+LongTVList中的数据为形如$<long, long>$的时间戳-值对，底层链表的长度不超过128
 
 \section{顺序插入结果}
 将$1$到$n$的数据顺序插入数据结构，统计插入时间
